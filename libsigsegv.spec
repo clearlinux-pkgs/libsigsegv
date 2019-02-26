@@ -4,9 +4,10 @@
 #
 # Source0 file verified with key 0x4F494A942E4616C2 (bruno@clisp.org)
 #
+%define keepstatic 1
 Name     : libsigsegv
 Version  : 2.12
-Release  : 1
+Release  : 2
 URL      : https://ftp.gnu.org/gnu/libsigsegv/libsigsegv-2.12.tar.gz
 Source0  : https://ftp.gnu.org/gnu/libsigsegv/libsigsegv-2.12.tar.gz
 Source99 : https://ftp.gnu.org/gnu/libsigsegv/libsigsegv-2.12.tar.gz.sig
@@ -47,9 +48,9 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551208928
+export SOURCE_DATE_EPOCH=1551209138
 export LDFLAGS="${LDFLAGS} -fno-lto"
-%configure --disable-static
+%configure
 make  %{?_smp_mflags}
 
 %check
@@ -60,7 +61,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1551208928
+export SOURCE_DATE_EPOCH=1551209138
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libsigsegv
 cp COPYING %{buildroot}/usr/share/package-licenses/libsigsegv/COPYING
@@ -72,6 +73,7 @@ cp COPYING %{buildroot}/usr/share/package-licenses/libsigsegv/COPYING
 %files dev
 %defattr(-,root,root,-)
 /usr/include/*.h
+/usr/lib64/*.a
 
 %files license
 %defattr(0644,root,root,0755)
