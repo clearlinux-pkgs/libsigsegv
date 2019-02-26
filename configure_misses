@@ -1,0 +1,18 @@
+Configure miss: PAGESIZE in limits.h
+Configure miss: whether a fault handler according to Linux/i386 works
+Configure miss: whether a fault handler according to old Linux/i386 works
+Configure miss: whether a fault handler according to Linux/m68k works
+Configure miss: whether a fault handler according to Linux/PowerPC works
+Configure miss: whether a fault handler according to Linux/HPPA works
+Configure miss: whether a fault handler according to BSD works
+Configure miss: whether a fault handler according to IRIX works
+Configure miss: whether a fault handler according to HP-UX HPPA works
+Configure miss: whether a fault handler according to OSF/1 Alpha works
+Configure miss: whether a fault handler according to NetBSD Alpha works
+Configure miss: whether a fault handler according to AIX works
+Configure miss: whether a fault handler according to MacOSX/Darwin7 PowerPC works
+Configure miss: whether a fault handler according to MacOSX/Darwin5 PowerPC works
+Configure miss: whether a fault handler according to Hurd works
+Configure miss: prmap_t in sys/procfs.h
+Configure miss: mquery
+Configure miss: whether to activate relocatable installation
